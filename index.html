@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asha, Your AI Coach!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div style="max-width: 1400px; margin: auto; padding: 30px 30px;"> <!-- Inline styles for horizontal and vertical padding -->
+      <!-- Hero Section -->
+      <section class="py-8 px-4 grid grid-cols-2 items-center gap-2">
+        <div class="flex flex-col gap-2">
+        <!-- Logo Image, absolutely positioned -->
+        <img src="/public/Logo.jpg" alt="Company Logo" class="absolute top-0 left-20 w-24 h-auto" style="margin-top: 20px;" /> 
+        <h1 class="text-2xl font-normal text-neutral-600">
+          <span class="text-neutral-600">Transform your leadership journey.</span>
+        </h1>
+        <h1 class="text-6xl uppercase font-extrabold text-neutral-600">
+          INTRODUCING YOUR AI COACH
+            <span class="text-pink-600">ASHA</span>
+          </h1>
+          <h1 class="text-2xl font-normal text-neutral-600">
+            <span class="text-neutral-600">ASHA offers personalized coaching through reflective case study-driven conversations.</span>
+          </h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 class="text-2xl font-bold text-neutral-600">
+            <span class="text-neutral-600">Get ready to embark on this journey. Talk with ASHA!</span>
+          </h1>
+        </div>
+        <div>
+          <div class="overflow-hidden rounded-xl">
+            <img src="/public/Asha1.jpg" alt="AI-generated image of Asha" />
+          </div>
+        </div>
+      </section>
+      <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "b1648607-7c7c-46d8-8849-095f4a7e742c",
+            apiHost: "https://llm-ai-qc2.niit-mts.com",
+            chatflowConfig: {
+                // topK: 2
+            },
+            theme: {
+              button: {
+                backgroundColor: "#EA3E7C",
+                right: 1330,
+                bottom: 90,
+                size: "large",
+                iconColor: "white",
+                customIconSrc: "/public/chat-icon.svg",
+            },
+                chatWindow: {
+                    welcomeMessage: "Type Start Session to begin.",
+                    backgroundColor: "#ffffff",
+                    height: 650,
+                    width: 1300,
+                    fontSize: 16,
+                    poweredByTextColor: "#303235",
+                    botMessage: {
+                        backgroundColor: "#f7f8ff",
+                        textColor: "#303235",
+                        showAvatar: true,
+                        avatarSrc: "/public/Asha1.jpg",
+                    },
+                    userMessage: {
+                        backgroundColor: "#3B81F6",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                        avatarSrc: "/public/user-icon.png",
+                    },
+                    textInput: {
+                        placeholder: "Type your response",
+                        backgroundColor: "#ffffff",
+                        textColor: "#303235",
+                        sendButtonColor: "#3B81F6",
+                    }
+                }
+            }
+        })
+    </script>
+    
+  </body>
+</html>
